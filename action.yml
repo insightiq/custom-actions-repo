@@ -1,7 +1,6 @@
 name: 'Install Python Dependencies'
-
-permissions: 'Install Python dependencies using PIP'
-
+description: 'GitHub Action to install Python dependencies using PIP'
+author: 'Athul'
 inputs:
   requirements-file:
     description: 'Path to the requirements file'
@@ -10,16 +9,8 @@ inputs:
 
 runs:
   using: 'docker'
-  image: 'python:3.12' 
+  image: 'python:3.12'
 
-steps:
-  - name: Checkout code
-    uses: actions/checkout@v2
-
-  - name: Set up Python
-    run: |
-      python -m pip install --upgrade pip
-
-  - name: Install dependencies
-    run: |
-      python -m pip install -r ${{ inputs.requirements-file }}
+branding:
+  icon: 'package'
+  color: 'blue'
