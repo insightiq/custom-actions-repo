@@ -1,6 +1,6 @@
 name: 'Install Python Dependencies'
 
-description: 'Install Python dependencies using PIP'
+permissions: 'Install Python dependencies using PIP'
 
 inputs:
   requirements-file:
